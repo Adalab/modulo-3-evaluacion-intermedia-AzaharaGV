@@ -1,10 +1,10 @@
 import React from "react";
 import data from "../data/pokemons.json";
 
-const Pokemon = (props, index) => {
+const Pokemon = (props) => {
   return (
     <>
-      <article key={index}>
+      <article>
         <h4 className="title">{props.name}</h4>
         <img src={props.url} alt={props.name} />
       </article>
