@@ -1,14 +1,15 @@
 import React from "react";
 import Pokemon from "./Pokemon";
-
+import "../stylesheets/pokemon.scss";
 const PokemonList = (props) => {
-  const itemPoke = props.list.map((item) => {
+  const pokemonsItems = props.getPokemons.map((pokemonItem) => {
     return (
-      <li key={item.id}>
-        <Pokemon name={item.name} />
+      <li key={pokemonItem.id}>
+        <Pokemon pokemon={pokemonItem} />
       </li>
     );
   });
-  return <ul>{itemPoke}</ul>;
+  return <ul className="list">{pokemonsItems}</ul>;
 };
+
 export default PokemonList;
